@@ -20,7 +20,7 @@ const HeroBanner = () => (
         </Stack>
         </Box>
 
-        <Box component="img"  src={HeroBannerImage} alt="hero-banner" sx={{width:{xs:'100%', md:'55%', sm:"100%"}}}></Box>
+        <Box component="img"  src={HeroBannerImage} alt="hero-banner" sx={{width:{xs:'100%', md:'50%', sm:"100%"}}}></Box>
         
   </Box>
 );
