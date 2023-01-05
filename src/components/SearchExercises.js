@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Box, Button, Stack, TextField, Typography } from '@mui/material';
 
 import { exerciseOptions, fetchData } from '../utils/fetchData';
-import HorizontalScrollbar from './HorizontalScrollbar';
+import BodyPartScrollbar from './BodyPartScrollbar';
 
 const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   const [search, setSearch] = useState('');
@@ -30,7 +30,6 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
       );
 
       window.scrollTo({ top: 1800, left: 100, behavior: 'smooth' });
-
       setSearch('');
       setExercises(searchedExercises);
     }
@@ -50,12 +49,12 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
           placeholder="Search Exercises"
           type="text"
         />
-        <Button className="search-btn" sx={{ bgcolor: '#FF2625', color: '#fff', textTransform: 'none', width: { lg: '173px', xs: '80px' }, height: '56px', position: 'absolute', right: '0px', fontSize: { lg: '20px', xs: '14px' } }} onClick={handleSearch}>
+        <Button className="search-btn" sx={{ bgcolor: '#7FE9DE', color: '#fff', textTransform: 'none', width: { lg: '173px', xs: '80px' }, height: '56px', position: 'absolute', right: '0px', fontSize: { lg: '20px', xs: '14px' } }} onClick={handleSearch}>
           Search
         </Button>
       </Box>
-      <Box sx={{ position: 'relative', width: '100%', p: '20px' }}>
-        <HorizontalScrollbar data={bodyParts} bodyParts setBodyPart={setBodyPart} bodyPart={bodyPart} />
+      <Box align="center" width="100%">
+        <BodyPartScrollbar data={bodyParts} setBodyPart={setBodyPart} bodyPart={bodyPart} />
       </Box>
     </Stack>
   );
